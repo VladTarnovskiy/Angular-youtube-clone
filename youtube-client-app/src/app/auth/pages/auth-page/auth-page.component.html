@@ -27,6 +27,7 @@
       id="password"
       formControlName="password"
       class="bg-gray-200 w-[382px] min-h-[44px] p-2 outline-none"
+      autocomplete="on"
       required
     />
     <div *ngIf="password?.errors?.['required']" class="invalid__message">
