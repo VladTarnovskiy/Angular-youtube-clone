@@ -1,6 +1,6 @@
 # YouTube-clone
 
-- Deploy: https://vladtarnovskiy.github.io/Angular-youtube-clone/
+- Deploy: https://vladtarnovskiy.github.io/angular-youtube-clone/
 
 ## Application structure
 
