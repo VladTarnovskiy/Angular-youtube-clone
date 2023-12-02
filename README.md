@@ -109,17 +109,16 @@
 2. Validation:
 
 - implement login form
-  - add validation rules for input fields:
-    - login
-      - required (message: "Please enter a login email")
-      - valid email (message: "The login email is invalid")
-    - password
-      - required (message: "Please enter a password")
-      - has a custom validator that will check how strong a password is. the following checks will be applied (message: "Your password isn't strong enough" + recommendations below):
-        - at least 8 characters
-        - a mixture of both uppercase and lowercase letters
-        - a mixture of letters and numbers
-        - inclusion of at least one special character, e.g., ! @ # ?
+  - login
+    - required (message: "Please enter a login email")
+    - valid email (message: "The login email is invalid")
+  - password
+    - required (message: "Please enter a password")
+    - has a custom validator that will check how strong a password is. the following checks will be applied (message: "Your password isn't strong enough" + recommendations below):
+      - at least 8 characters
+      - a mixture of both uppercase and lowercase letters
+      - a mixture of letters and numbers
+      - inclusion of at least one special character, e.g., ! @ # ?
 
 3. After entering the data, the user is directed to the main page.
 
