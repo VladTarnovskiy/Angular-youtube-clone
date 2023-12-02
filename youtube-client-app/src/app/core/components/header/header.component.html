@@ -1,0 +1,23 @@
+<header class="header mb-2">
+  <div class="header__content flex justify-between items-center">
+    <div class="header__logo w-20 h-24 mr-4 flex items-center relative">
+      <img
+        src="assets/youtube-svgrepo-com.svg"
+        alt="youtube"
+        class="w-20 h-24"
+      />
+    </div>
+    <app-search-bar (sortBlock)="turnSortBlock($event)"></app-search-bar>
+    <div class="header__profile flex justify-center items-center">
+      <div class="mr-2">Your name</div>
+      <button
+        class="h-10 rounded-md w-10 text-white text-md text-center ml-2 hover:shadow-lg hover:shadow-red-500/40"
+      >
+        <img src="assets/Profile.svg" alt="profile" class="w-10 h-10" />
+      </button>
+      <a routerLink="login" class="ml-4" (click)="logout()"
+        ><app-button>{{ textButton ? "Logout" : "Login" }}</app-button></a
+      >
+    </div>
+  </div>
+</header>
