@@ -11,44 +11,36 @@
 - Login page
 - 404 pages
 
-  app
-  ├── core
-  │ ├── components
-  │ ├── pages
-  │ ├── services
-  │ ├── guards
-  ├── shared
-  │ ├── components
-  │ ├── directives
-  │ ├── models
-  │ ├── pipes
-  ├── redux
-  │ ├── actions
-  │ ├── effects
-  │ ├── reducers
-  │ ├── selectors
-  │ ├── state.models.ts
-  ├── youtube
-  │ ├── components
-  │ ├── directives
-  │ ├── models
-  │ ├── pages
-  │ ├── pipes
-  │ ├── services
-  ├── auth
-  │ ├── components
-  │ ├── models
-  │ ├── pages
-  │ ├── services
-  ├── favorite
-  │ ├── components
-  │ ├── models
-  │ ├── services
-  ├── app.component.html
-  ├── app.component.scss
-  ├── app.component.ts
-  ├── app.component.spec.ts
-  ├── app.module.ts
+  ```
+    app
+    ├── core
+    │   ├── components
+    │   ├── pages
+    │   ├── services
+    │   ├── guards
+    ├── shared
+    │   ├── components
+    │   ├── directives
+    │   ├── models
+    │   ├── pipes
+    ├── youtube
+    │   ├── components
+    │   ├── directives
+    │   ├── models
+    │   ├── pages
+    │   ├── pipes
+    │   ├── services
+    ├── auth
+    │   ├── components
+    │   ├── models
+    │   ├── pages
+    │   ├── services
+    ├── app.component.html
+    ├── app.component.scss
+    ├── app.component.ts
+    ├── app.component.spec.ts
+    ├── app.module.ts
+  ```
 
 ## Dev stack
 
@@ -134,3 +126,7 @@
 #### 404 page
 
 1. Contains a message that the page was not found.
+
+```
+
+```
