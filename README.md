@@ -1,46 +1,46 @@
 # YouTube-clone
 
-- App deploy: https://vladtarnovskiy.github.io/Angular-youtube-clone/
+- Deploy: https://vladtarnovskiy.github.io/Angular-youtube-clone/
 
 ## Application structure
 
-- Main page
-- Detailed information page
-- Favorite page
-- Admin page
-- Login page
-- 404 pages
+1. Main page
+2. Detailed information page
+3. Favorite page
+4. Admin page
+5. Login page
+6. 404 pages
 
-  ```
-    app
-    ├── core
-    │   ├── components
-    │   ├── pages
-    │   ├── services
-    │   ├── guards
-    ├── shared
-    │   ├── components
-    │   ├── directives
-    │   ├── models
-    │   ├── pipes
-    ├── youtube
-    │   ├── components
-    │   ├── directives
-    │   ├── models
-    │   ├── pages
-    │   ├── pipes
-    │   ├── services
-    ├── auth
-    │   ├── components
-    │   ├── models
-    │   ├── pages
-    │   ├── services
-    ├── app.component.html
-    ├── app.component.scss
-    ├── app.component.ts
-    ├── app.component.spec.ts
-    ├── app.module.ts
-  ```
+```
+  app
+  ├── core
+  │   ├── components
+  │   ├── pages
+  │   ├── services
+  │   ├── guards
+  ├── shared
+  │   ├── components
+  │   ├── directives
+  │   ├── models
+  │   ├── pipes
+  ├── youtube
+  │   ├── components
+  │   ├── directives
+  │   ├── models
+  │   ├── pages
+  │   ├── pipes
+  │   ├── services
+  ├── auth
+  │   ├── components
+  │   ├── models
+  │   ├── pages
+  │   ├── services
+  ├── app.component.html
+  ├── app.component.scss
+  ├── app.component.ts
+  ├── app.component.spec.ts
+  ├── app.module.ts
+```
 
 ## Dev stack
 
@@ -126,7 +126,3 @@
 #### 404 page
 
 1. Contains a message that the page was not found.
-
-```
-
-```
