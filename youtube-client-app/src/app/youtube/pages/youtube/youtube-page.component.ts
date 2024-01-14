@@ -17,16 +17,13 @@ import { CustomCard } from '../../models/customCard.model';
   styleUrls: ['./youtube-page.component.scss'],
 })
 export class YouTubePageComponent implements OnDestroy, OnInit {
-  cards$: Observable<Card[] | undefined> = this.store.select(selectCurrentCards);
-
+  cards$: Observable<Card[] | undefined> =
+    this.store.select(selectCurrentCards);
   isLoading$: Observable<boolean> = this.store.select(selectLoading);
-
   page$: Observable<number> = this.store.select(selectPage);
-
-  customCards$: Observable<CustomCard[] | null> = this.store.select(selectCustomCards);
-
+  customCards$: Observable<CustomCard[] | null> =
+    this.store.select(selectCustomCards);
   customCardsCount!: number;
-
   subscription!: Subscription;
 
   constructor(private store: Store) {}
@@ -40,7 +37,7 @@ export class YouTubePageComponent implements OnDestroy, OnInit {
     this.store.dispatch(
       CardsActions.InitCustomCards({
         storageCustomCards: this.initialCustomCards(),
-      }),
+      })
     );
   }
 

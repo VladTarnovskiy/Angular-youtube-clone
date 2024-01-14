@@ -11,11 +11,8 @@ import { Card } from 'src/app/youtube/models/card.model';
 })
 export class FavoritePageComponent implements OnInit, OnDestroy {
   cards!: Card[];
-
   haveCards = false;
-
   subscription!: Subscription;
-
   favCards$: Observable<Card[] | null> = this.store.select(selectFavoriteCards);
 
   ngOnInit() {

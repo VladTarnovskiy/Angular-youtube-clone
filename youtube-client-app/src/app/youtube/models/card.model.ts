@@ -33,6 +33,9 @@ export interface Card {
     defaultAudioLanguage: string;
   };
   statistics: Statistics;
+  player: {
+    embedHtml: string;
+  };
 }
 
 interface PageInfo {

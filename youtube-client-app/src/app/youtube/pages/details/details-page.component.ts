@@ -1,7 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {
-  Observable, Subscription, find, from, map, switchMap,
-} from 'rxjs';
+import { Observable, Subscription, find, from, map, switchMap } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as FavCardsActions from 'src/app/redux/favorite/actions/fav-cards.action';
 import { selectCard } from 'src/app/redux/cards/selectors/cards.selectors';
@@ -15,14 +13,12 @@ import { Card } from '../../models/card.model';
 })
 export class DetailsPageComponent implements OnInit, OnDestroy {
   isFavorite = false;
-
   card$: Observable<Card | null> = this.store.select(selectCard);
-
+  card!: Card | null;
   cardId!: string;
-
   favCards$: Observable<Card[] | null> = this.store.select(selectFavoriteCards);
-
   subscription!: Subscription;
+  playerLink!: string | null;
 
   constructor(private store: Store) {}
 
@@ -40,12 +36,15 @@ export class DetailsPageComponent implements OnInit, OnDestroy {
         this.cardId = card.id;
       }
     });
-    const childSubscription = this.favCards$
+
+    const firstChildSubscription = this.favCards$
       .pipe(
-        switchMap((favCards) => from(favCards ?? []).pipe(
-          find((favCard) => favCard.id === this.cardId),
-          map((value) => !!value),
-        )),
+        switchMap((favCards) =>
+          from(favCards ?? []).pipe(
+            find((favCard) => favCard.id === this.cardId),
+            map((value) => !!value)
+          )
+        )
       )
       .subscribe((isFav: boolean) => {
         if (isFav) {
@@ -55,7 +54,19 @@ export class DetailsPageComponent implements OnInit, OnDestroy {
         }
       });
 
-    this.subscription.add(childSubscription);
+    const secondChildSubscription = this.card$.subscribe(
+      (card: Card | null) => {
+        if (card) {
+          this.card = card;
+          this.playerLink = `https:${
+            card.player.embedHtml.split('"')[5]
+          }?autoplay=1`;
+        }
+      }
+    );
+
+    this.subscription.add(firstChildSubscription);
+    this.subscription.add(secondChildSubscription);
   }
 
   ngOnDestroy() {

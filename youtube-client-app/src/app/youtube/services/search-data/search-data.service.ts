@@ -14,10 +14,10 @@ import { CardsInfo, SearchCardsInfo } from '../../models/card.model';
 })
 export class SearchDataService {
   private cardsURL =
-    'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&type=video';
+    'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&type=video&videoEmbeddable=true';
 
   private statisticsURL =
-    'https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics';
+    'https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,player';
 
   constructor(private http: HttpClient, private store: Store) {}
 

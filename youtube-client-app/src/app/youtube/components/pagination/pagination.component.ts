@@ -15,13 +15,9 @@ import * as CardsActions from 'src/app/redux/cards/actions/cards.action';
 })
 export class PaginationComponent implements OnInit, OnDestroy {
   pagesInfo$: Observable<PagesInfo> = this.store.select(selectPageInfo);
-
   page$: Observable<number> = this.store.select(selectPage);
-
   pagesInfo!: PagesInfo;
-
   subscription!: Subscription;
-
   page!: number;
 
   constructor(private store: Store) {}
@@ -45,7 +41,7 @@ export class PaginationComponent implements OnInit, OnDestroy {
           pageToken: this.pagesInfo.nextPage,
           searchValue: this.pagesInfo.searchValue,
           page: (this.page += 1),
-        }),
+        })
       );
     }
   }
@@ -57,7 +53,7 @@ export class PaginationComponent implements OnInit, OnDestroy {
           pageToken: this.pagesInfo.prevPage,
           searchValue: this.pagesInfo.searchValue,
           page: (this.page -= 1),
-        }),
+        })
       );
     }
   }

@@ -16,7 +16,6 @@ import { AuthService } from 'src/app/auth/services/auth/auth.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
-
   logIn = false;
 
   @Output() sortBlock = new EventEmitter<boolean>();

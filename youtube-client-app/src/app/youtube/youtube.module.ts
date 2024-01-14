@@ -11,6 +11,7 @@ import { AdminPageComponent } from './pages/admin/admin-page.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { HistoryBackDirective } from './directives/historyBack/history-back.directive';
 import { CustomCardComponent } from './components/custom-card/custom-card.component';
+import { SafePipe } from './pipes/safe/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CustomCardComponent } from './components/custom-card/custom-card.compon
     PaginationComponent,
     HistoryBackDirective,
     CustomCardComponent,
+    SafePipe,
   ],
   imports: [SharedModule, YouTubeRouterModule, ReactiveFormsModule],
   exports: [CardComponent, CardColorDirective],

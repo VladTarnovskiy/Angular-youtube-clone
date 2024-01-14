@@ -21,9 +21,7 @@ import * as CardsActions from 'src/app/redux/cards/actions/cards.action';
 })
 export class SearchBarComponent implements OnInit, OnDestroy {
   @Output() sortBlock = new EventEmitter<boolean>();
-
   private searchTerms = new BehaviorSubject<string>('cat');
-
   filterButton = false;
 
   constructor(private store: Store) {}
@@ -37,9 +35,11 @@ export class SearchBarComponent implements OnInit, OnDestroy {
       .pipe(
         filter((data) => data.length > 2),
         debounceTime(1000),
-        distinctUntilChanged(),
+        distinctUntilChanged()
       )
-      .subscribe((searchValue) => this.store.dispatch(CardsActions.FetchCards({ searchValue })));
+      .subscribe((searchValue) =>
+        this.store.dispatch(CardsActions.FetchCards({ searchValue }))
+      );
   }
 
   turnSortBlock() {
