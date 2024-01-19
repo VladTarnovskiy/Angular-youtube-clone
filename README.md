@@ -62,11 +62,11 @@
 6. There is pagination.
 
 #### Detailed information page:
-
-1. Contains more detailed information about the video.
-2. Views, likes, dislikes, comments, video title, creation date and video description.
-3. Clicking the back button takes the user back to the original page.
-4. By clicking on the heart icon, the user can add/remove cards to the Favorite page.
+1. Video player.
+2. Contains more detailed information about the video.
+3. Views, likes, dislikes, comments, video title, creation date and video description.
+4. Clicking the back button takes the user back to the original page.
+5. By clicking on the heart icon, the user can add/remove cards to the Favorite page.
 
 #### Favorite page:
 
